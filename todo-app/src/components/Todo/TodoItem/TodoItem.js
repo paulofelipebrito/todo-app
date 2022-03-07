@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './TodoItem.css';
 
 function TodoItem(props){
-  // const [deleteText, setDeleteText] = useState('');
 
-  const deleteHandler = () => {
+  function handlerDelete(){
     // setDeleteText('(Deleted!)');
     props.onDelete(props.id);
   };
 
+  function handlerRightClick(event){
+    event.preventDefault();
+    props.onRightClick(props.id);
+  }
+
   return (
-    <li className="todo-item" onClick={deleteHandler}>
+    <li className={props.completed ? "todo-item__completed" : "todo-item"} onClick={handlerDelete} onContextMenu={handlerRightClick}>
       {props.children}
     </li>
   );

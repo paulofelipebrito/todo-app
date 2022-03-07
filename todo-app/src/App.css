@@ -4,6 +4,14 @@
   margin: 3rem auto;
 }
 
+#instructions{ 
+  width: 30rem;
+  max-width: 90%;
+  margin: 3rem auto;
+  color: #b6b6b6;
+  text-align: center;
+}
+
 #todo-form {
   width: 30rem;
   max-width: 90%;

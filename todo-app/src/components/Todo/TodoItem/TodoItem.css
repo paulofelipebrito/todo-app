@@ -1,8 +1,17 @@
 .todo-item {
   margin: 1rem 0;
-  background: #8b005d;
+  background: rgb(179,131,226);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   color: white;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+.todo-item__completed {
+  margin: 1rem 0;
+  background: rgb(179,131,226);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  color: #ccc;
+  text-decoration: line-through;
   padding: 1rem 2rem;
   cursor: pointer;
 }

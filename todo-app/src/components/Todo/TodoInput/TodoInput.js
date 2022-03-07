@@ -21,13 +21,14 @@ function TodoInput({onAddTodo}){
       return;
     }
     onAddTodo(enteredValue);
+    setEnteredValue('')
   };
 
   return (
     <form onSubmit={formSubmitHandler}>
       <FormControl invalid={!isValid}>
-        <label>To do taks</label>
-        <input type="text" onChange={handlerTodoInputChange} />
+        <label>Todos</label>
+        <input type="text" value={enteredValue} placeholder="What needs to be done?" onChange={handlerTodoInputChange} />
       </FormControl>
       <Button type="submit">Add Task</Button>
     </form>

@@ -5,9 +5,12 @@ export const FormControl = styled.div`
 
   & label {
     font-weight: bold;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
     margin-bottom: 0.5rem;
-    color: ${props => (props.invalid ? 'red' : 'black')};
+    color: ${props => (props.invalid ? 'red' : 'rgb(179,131,226)')};
   }
 
   & input {
